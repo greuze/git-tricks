@@ -27,6 +27,7 @@ function sendChangeIpEmail(transporter, publicIp, privateIps) {
 var transporter = nodemailer.createTransport(config.smtp);
 var publicIp;
 
+// Get privated IPs as a comma separated string
 function getPrivateIps() {
     var ifaces = os.networkInterfaces();
     var privateIps = [];
