@@ -53,7 +53,7 @@ function main() {
                 logger.info('New public IP %s with private IPs %s', newPublicIp, privateIps);
                 sendChangeIpEmail(transporter, publicIp, privateIps);
             } else {
-                logger.debug('Ip remains');
+                logger.debug('Public IP does not change');
             }
             // Next run will be at 'delay' minutes
             setTimeout(main, config.delay * 60 * 1000);
