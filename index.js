@@ -23,8 +23,9 @@ function sendChangeIpEmail(transporter, publicIp, privateIps) {
     });
 }
 
-// create reusable transporter object using the default SMTP transport
+// Create reusable transporter object using the default SMTP transport
 var transporter = nodemailer.createTransport(config.smtp);
+// Will indicate previous IP, to know if it changed
 var publicIp;
 
 // Get privated IPs as a comma separated string
@@ -39,6 +40,7 @@ function getPrivateIps() {
     return privateIps.map(function(iface) { return iface.address; }).join(',');
 }
 
+// Main loop that will be called every 'delay' minutes
 function main() {
     exec('dig +short myip.opendns.com @resolver1.opendns.com', function (err, stdout, stderr) {
         if (err) {
