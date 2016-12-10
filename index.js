@@ -39,6 +39,7 @@ function getPrivateIps() {
     return privateIps.map(function(iface) { return iface.address; }).join(',');
 }
 
+// Main loop that will be called every 'delay' minutes
 function main() {
     exec('dig +short myip.opendns.com @resolver1.opendns.com', function (err, stdout, stderr) {
         if (err) {
