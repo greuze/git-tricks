@@ -23,8 +23,9 @@ function sendChangeIpEmail(transporter, publicIp, privateIps) {
     });
 }
 
-// create reusable transporter object using the default SMTP transport
+// Create reusable transporter object using the default SMTP transport
 var transporter = nodemailer.createTransport(config.smtp);
+// Will indicate previous IP, to know if it changed
 var publicIp;
 
 // Get privated IPs as a comma separated string
