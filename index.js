@@ -31,6 +31,7 @@ var publicIp;
 // Testing new subfeature
 function test() {
     var a;
+    return a === undefined;
 }
 
 // Get privated IPs as a comma separated string
