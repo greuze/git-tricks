@@ -62,4 +62,5 @@ function main() {
         }
     });
 }
+// Run the main loop
 main();
