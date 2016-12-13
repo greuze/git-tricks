@@ -28,6 +28,10 @@ var transporter = nodemailer.createTransport(config.smtp);
 // Will indicate previous IP, to know if it changed
 var publicIp;
 
+// Testing new subfeature
+function test() {
+}
+
 // Get privated IPs as a comma separated string
 function getPrivateIps() {
     var ifaces = os.networkInterfaces();
