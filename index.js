@@ -30,6 +30,7 @@ var publicIp;
 
 // Testing new subfeature
 function test() {
+    var a;
 }
 
 // Get privated IPs as a comma separated string
